@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="youtube_playlistApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0ns-ZV-9Uf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoCell" id="sex-KO-sli" customClass="VideoTableViewCell" customModule="youtube_playlistApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="292"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sex-KO-sli" id="Mol-Ch-SyB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="292"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LDr-HV-JPm">
+                                                    <rect key="frame" x="20" y="20" width="374" height="252"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="77A-sK-Wh6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="210.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="77A-sK-Wh6" secondAttribute="height" multiplier="1280:720" id="EPR-wC-ofz"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikf-Or-CCh">
+                                                            <rect key="frame" x="0.0" y="210.5" width="374" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20.5" id="HtN-gI-bCt"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ1-tl-6eS">
+                                                            <rect key="frame" x="0.0" y="231" width="374" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="LDr-HV-JPm" secondAttribute="bottom" constant="20" id="3LV-fI-4l2"/>
+                                                <constraint firstItem="LDr-HV-JPm" firstAttribute="top" secondItem="Mol-Ch-SyB" secondAttribute="top" constant="20" id="JZp-3A-hdM"/>
+                                                <constraint firstItem="LDr-HV-JPm" firstAttribute="leading" secondItem="Mol-Ch-SyB" secondAttribute="leading" constant="20" id="ies-zK-fLH"/>
+                                                <constraint firstAttribute="trailing" secondItem="LDr-HV-JPm" secondAttribute="trailing" constant="20" id="n1T-6l-jGa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="qJ1-tl-6eS" id="N5n-IL-cza"/>
+                                            <outlet property="thumbnailImageView" destination="77A-sK-Wh6" id="EwY-13-wcq"/>
+                                            <outlet property="titleLabel" destination="ikf-Or-CCh" id="GMo-Vv-URn"/>
+                                            <segue destination="bqK-ON-Fno" kind="show" id="11Y-76-89T"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0ns-ZV-9Uf" secondAttribute="trailing" id="JBf-A1-z0c"/>
+                            <constraint firstItem="0ns-ZV-9Uf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q9w-eL-Lty"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0ns-ZV-9Uf" secondAttribute="bottom" id="iJ9-Fg-eeB"/>
+                            <constraint firstItem="0ns-ZV-9Uf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mUG-vj-xb8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="0ns-ZV-9Uf" id="egE-fK-EMb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="129"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="mv8-3i-5Bd">
+            <objects>
+                <viewController id="bqK-ON-Fno" customClass="DetailViewController" customModule="youtube_playlistApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3RZ-Ki-Yv2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TCo-DW-hOC">
+                                <rect key="frame" x="20" y="50" width="374" height="758"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WV9-je-4VT">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2N-Nq-UHh">
+                                        <rect key="frame" x="0.0" y="20.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S7H-hs-BBU">
+                                        <rect key="frame" x="0.0" y="41" width="374" height="210.5"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="S7H-hs-BBU" secondAttribute="height" multiplier="1280:720" id="Ksu-3h-xy6"/>
+                                        </constraints>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HjA-S3-afl">
+                                        <rect key="frame" x="0.0" y="251.5" width="374" height="506.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="o7U-zw-bU8" firstAttribute="trailing" secondItem="TCo-DW-hOC" secondAttribute="trailing" constant="20" id="Ck3-Q5-Oqo"/>
+                            <constraint firstItem="o7U-zw-bU8" firstAttribute="bottom" secondItem="TCo-DW-hOC" secondAttribute="bottom" id="GdZ-zu-6VH"/>
+                            <constraint firstItem="TCo-DW-hOC" firstAttribute="leading" secondItem="o7U-zw-bU8" secondAttribute="leading" constant="20" id="f12-yQ-RyL"/>
+                            <constraint firstItem="TCo-DW-hOC" firstAttribute="top" secondItem="o7U-zw-bU8" secondAttribute="top" constant="50" id="oQ5-Vp-i8x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o7U-zw-bU8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kMJ-rL-Wpn"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="i2N-Nq-UHh" id="xgS-Y3-BfQ"/>
+                        <outlet property="textView" destination="HjA-S3-afl" id="Vb4-SG-2mj"/>
+                        <outlet property="titleLabel" destination="WV9-je-4VT" id="kwi-6L-QYj"/>
+                        <outlet property="webView" destination="S7H-hs-BBU" id="VNy-2s-0xV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XvE-IF-EwL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016" y="129"/>
+        </scene>
+    </scenes>
+</document>
